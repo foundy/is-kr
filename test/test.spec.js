@@ -15,4 +15,10 @@ describe('is-kr', () => {
     expect(result).to.equal(true);
   });
 
+  it('한글 제거', () => {
+    const result = isKr.delKr('show me the 돈money');
+
+    expect(result).to.equal('show me the money');
+  });
+
 });
